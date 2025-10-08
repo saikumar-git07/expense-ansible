@@ -17,10 +17,10 @@
 
   - name: install python dependencies
     ansible.builtin.pip:
-     name: 
+      name: 
        - PyMySQL
        - cryptography
-       - executable: pip3.9
+      executable: pip3.9
 
   - name: check DB connection
     community.mysql.mysql_info:
