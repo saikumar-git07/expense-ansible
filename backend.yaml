@@ -4,7 +4,7 @@
   vars:
 
   tasks:
-  - name: disble nodejs module
+  - name: disble default nodejs
     ansible.builtin.command: dnf module disble nodejs -y
   
   - name: enable nodejs:20 
@@ -13,7 +13,7 @@
   - name: install nodejs
     ansible.builtin.dnf:
       name: "{{ item }}"
-      state: latest
+      state: installed
     loop:
     - nodejs
     - mysql
